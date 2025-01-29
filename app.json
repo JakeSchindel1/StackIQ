@@ -1,28 +1,30 @@
 {
   "expo": {
     "name": "StackIQv3",
-    "slug": "StackIQv3",
+    "slug": "stackiqv3",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "scheme": "stackiqv3",
     "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+      "bundleIdentifier": "com.stackiq",
+      "googleServicesFile": "./config/GoogleService-Info.plist",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.88599104808-4sgum83fvjuvedvjn368osdaaflkelgl"
+        }
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      "@react-native-google-signin/google-signin",
+      "expo-web-browser"
+    ],
+    "android": {
+      "package": "com.stackiq"
     }
   }
 }
